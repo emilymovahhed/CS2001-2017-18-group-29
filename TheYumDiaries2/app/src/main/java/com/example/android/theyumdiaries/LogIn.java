@@ -20,6 +20,7 @@ public class LogIn extends AppCompatActivity {
 
             GoToNewActivity = (Button)findViewById(R.id.button1);
 
+
             GoToNewActivity.setOnClickListener(new View.OnClickListener() {
 
                 @Override
@@ -30,9 +31,23 @@ public class LogIn extends AppCompatActivity {
                     Intent intent = new Intent(LogIn.this, SignUp.class);
                     startActivity(intent);
 
+                    GoToNewActivity = (Button) findViewById(R.id.button);
+
+                    GoToNewActivity.setOnClickListener(new View.OnClickListener() {
+
+                        @Override
+                        public void onClick(View v) {
+
+                            // Intent code for open new activity through intent.
+
+                            Intent intent = new Intent(LogIn.this, HomePage.class);
+                            startActivity(intent);
+                        }
+                    });
                 }
+
             });
-        }
-            }
+        };
+}
 
 
