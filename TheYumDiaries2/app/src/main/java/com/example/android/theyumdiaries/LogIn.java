@@ -18,7 +18,7 @@ public class LogIn extends AppCompatActivity {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.log_in);
 
-            GoToNewActivity = (Button)findViewById(R.id.button1);
+            GoToNewActivity = (Button)findViewById(R.id.Bcreateanaccount);
 
 
             GoToNewActivity.setOnClickListener(new View.OnClickListener() {
@@ -31,7 +31,7 @@ public class LogIn extends AppCompatActivity {
                     Intent intent = new Intent(LogIn.this, SignUp.class);
                     startActivity(intent);
 
-                    GoToNewActivity = (Button) findViewById(R.id.button);
+                    GoToNewActivity = (Button) findViewById(R.id.Blogin);
 
                     GoToNewActivity.setOnClickListener(new View.OnClickListener() {
 
