@@ -68,7 +68,7 @@
         android:textColor="#ff5e62" android:focusable="true" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button1"
         android:layout_width="260dp"
         android:layout_height="45dp"
         android:layout_alignLeft="@+id/editText2"
