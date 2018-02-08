@@ -1,57 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
-tools:context="com.example.android.theyumdiaries.profile_page">
+    android:background="@drawable/gradient">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Save"
-        android:background="@drawable/background_login"
-        tools:layout_editor_absoluteX="256dp"
-        tools:layout_editor_absoluteY="447dp" />
-
-    <EditText
-        android:id="@+id/text"
-        android:layout_width="90dp"
-        android:layout_height="41dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Email"
-        tools:layout_editor_absoluteX="82dp"
-        tools:layout_editor_absoluteY="296dp" />
-
-    <EditText
-        android:id="@+id/txt2"
-        android:layout_width="136dp"
-        android:layout_height="41dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Choose Dietary"
-        tools:layout_editor_absoluteX="82dp"
-        tools:layout_editor_absoluteY="337dp" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="196dp"
-        android:layout_height="196dp"
-        app:srcCompat="@drawable/user_icon"
-        tools:layout_editor_absoluteX="82dp"
-        tools:layout_editor_absoluteY="16dp" />
+        android:layout_width="120dp"
+        android:layout_height="150dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        app:srcCompat="@drawable/user_icon" android:contentDescription="TODO" />
+
+    <EditText
+        android:id="@+id/Email"
+        android:layout_width="160dp"
+        android:layout_height="35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:background="#11000000"
+        android:ems="11"
+        android:hint="Email"
+        android:inputType="textPersonName"
+        android:textSize="16sp"  />
+    <Spinner
+        android:id="@+id/SpinnerDietary"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Email"
+        android:layout_alignStart="@+id/Email"
+        android:layout_alignTop="@+id/Email"
+        android:layout_marginTop="38dp">
+
+    </Spinner>
+
+    <Spinner
+        android:id="@+id/SpinnerPrivacy"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/SpinnerDietary"
+        android:layout_alignStart="@+id/SpinnerDietary"
+        android:layout_alignTop="@+id/SpinnerDietary"
+        android:layout_marginTop="38dp">
+
+    </Spinner>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/imageView"
+        android:layout_alignStart="@+id/imageView"
+        android:id="@+id/linearLayout">
+
+    </LinearLayout>
 
     <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Edit"
+        android:id="@+id/Edit"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/imageView"
         android:background="@drawable/background_login"
-        tools:layout_editor_absoluteX="136dp"
-        tools:layout_editor_absoluteY="231dp" />
+        android:clickable="true"
+        android:ems="11"
+        android:focusable="true"
+        android:text="Edit"
+        android:textColor="#ff5e62" />
 
+    <Button
+        android:id="@+id/Save"
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:layout_below="@+id/SpinnerDietary"
+        android:layout_marginLeft="280dp"
+        android:layout_marginTop="190dp"
+        android:background="@drawable/background_login"
+        android:clickable="true"
+        android:ems="11"
+        android:focusable="true"
+        android:text="Save"
+        android:textColor="#ff5e62" />
 
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
