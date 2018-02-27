@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class LogIn extends AppCompatActivity {
 
@@ -45,12 +46,22 @@ public class LogIn extends AppCompatActivity {
                         String pass = b.getText().toString();
 
                         String password = helper.searchPass(str);
+                        if(pass.equals(password))
+                        {
+                            Intent i = new Intent(LogIn.this, HomePage.class);
+                            startActivity(i);
+
+                        }
+                        else
+                        {
+                            Toast temp = Toast.makeText(LogIn.this, "Username and password don't match!", Toast.LENGTH_SHORT);
+                            temp.show();
+
+                        }
 
 
-                        Intent intent = new Intent(LogIn.this, HomePage.class);
 
 
-                        startActivity(intent);
                     }
 
                         }
