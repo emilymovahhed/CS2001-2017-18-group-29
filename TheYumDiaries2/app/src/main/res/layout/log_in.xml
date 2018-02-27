@@ -65,6 +65,7 @@
         android:clickable="true"
         android:ems="11"
         android:focusable="true"
+        android:onClick="onButtonClick"
         android:text="Log in"
         android:textColor="#ff5e62" />
 
