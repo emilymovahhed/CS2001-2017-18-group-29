@@ -28,26 +28,23 @@ public class LogIn extends AppCompatActivity {
 
                     // Intent code for open new activity through intent.
 
-                    Intent intent = new Intent(LogIn.this, SignUp.class);
-                    startActivity(intent);
+                    if (v.getId() == R.id.Bcreateanaccount)
+                    {
+                        Intent intent = new Intent(LogIn.this, SignUp.class);
+                        startActivity(intent);
+                    }
 
-                    GoToNewActivity = (Button) findViewById(R.id.Blogin);
+                    if (v.getId() == R.id.Blogin)
+                    {
+                        Intent intent = new Intent(LogIn.this, HomePage.class);
+                        startActivity(intent);
+                    }
 
-                    GoToNewActivity.setOnClickListener(new View.OnClickListener() {
-
-                        @Override
-                        public void onClick(View v) {
-
-                            // Intent code for open new activity through intent.
-
-                            Intent intent = new Intent(LogIn.this, HomePage.class);
-                            startActivity(intent);
                         }
                     });
                 }
 
-            });
-        };
+
 }
 
 
