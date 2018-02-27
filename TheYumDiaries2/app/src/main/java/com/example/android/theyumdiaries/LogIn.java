@@ -8,9 +8,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class LogIn extends AppCompatActivity {
 
+        DatabaseHelper helper = new DatabaseHelper(this);
 
 
         Button GoToNewActivity;
@@ -36,7 +38,18 @@ public class LogIn extends AppCompatActivity {
 
                     if (v.getId() == R.id.Blogin)
                     {
+                        EditText a = (EditText)findViewById(R.id.TFusername);
+                        String str = a.getText().toString();
+
+                        EditText b = (EditText)findViewById(R.id.TFpassword);
+                        String pass = b.getText().toString();
+
+                        String password = helper.searchPass(str);
+
+
                         Intent intent = new Intent(LogIn.this, HomePage.class);
+
+
                         startActivity(intent);
                     }
 
